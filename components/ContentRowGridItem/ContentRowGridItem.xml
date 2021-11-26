@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) 2021 Roku, Inc. All rights reserved. -->
+<component name="ContentRowGridItem" extends="Group">
+    <interface>
+        <!-- <field id="width" type="float" alias="itemPoster.width" />
+        <field id="height" type="float" alias="itemPoster.height" /> -->
+        <field id="itemContent" type="node" onChange="itemContentChanged" />
+        <field id="titlerepeatCount" type="integer" alias="itemTitleLabel.repeatCount"/>
+        <field id="descrrepeatCount" type="integer" alias="itemDescriptionLabel.repeatCount"/>
+    </interface>
+
+    <script type="text/brightscript" uri="ContentRowGridItem.brs" />
+    <children>
+        <Poster
+            id="itemPoster"
+            loadDisplayMode="scaleToFit"
+            height="150"
+            width="150"
+            loadWidth="242"
+            loadHeight="136"
+        />
+        <ScrollingLabel
+            id="itemTitleLabel"
+            repeatCount="0"
+            height="200"
+            maxWidth="200"
+            font="font:MediumBoldSystemFont"
+            horizAlign = "left"
+            vertAlign = "bottom"
+        />
+        <ScrollingLabel
+            id="itemDescriptionLabel"
+            repeatCount="0"
+            height="230"
+            maxWidth="200"
+            text="Example"
+            font="font:MediumBoldSystemFont"
+            horizAlign = "left"
+            vertAlign = "bottom"
+        />
+        
+    </children>
+</component>

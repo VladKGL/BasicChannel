@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <component name="MainScene" extends="BaseScene">
+    <children>
+        <!-- <SideBar
+        id="leftSideBar"
+        color="#00000"
+        width="350"
+        height="1920"
+        translation="[0,0]"
+        opacity="0.87"
+    /> -->
+    </children>
+    <!-- importing main handler -->
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <script type="text/brightscript" uri="../../source/rsg_utils.brs" />
+    </component>

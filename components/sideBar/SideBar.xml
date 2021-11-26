@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SideBar" extends="Rectangle" initialFocus="leftSideBarButtonGroup">
+<script type="text/brightscript" uri="showSideBar.brs"/>
+<children>
+    <ButtonGroup
+    id="leftSideBarButtonGroup"
+    />
+</children>
+</component>
