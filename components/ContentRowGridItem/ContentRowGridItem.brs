@@ -7,7 +7,4 @@ function itemContentChanged()
     itemDescriptionLabel.text = m.top.itemContent.description
 end function
 
-function smth()
-    print "smmth"
 
-end function

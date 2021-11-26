@@ -5,8 +5,6 @@
         <!-- <field id="width" type="float" alias="itemPoster.width" />
         <field id="height" type="float" alias="itemPoster.height" /> -->
         <field id="itemContent" type="node" onChange="itemContentChanged" />
-        <field id="titlerepeatCount" type="integer" alias="itemTitleLabel.repeatCount"/>
-        <field id="descrrepeatCount" type="integer" alias="itemDescriptionLabel.repeatCount"/>
     </interface>
 
     <script type="text/brightscript" uri="ContentRowGridItem.brs" />

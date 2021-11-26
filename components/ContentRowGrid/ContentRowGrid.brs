@@ -5,19 +5,19 @@ sub init()
         translation: [280, 100]
         itemComponentName: "ContentRowGridItem"
     })
-
-    contentGrid.ObserveField("rowItemSelected", "ItemSelectedObserver")
-    contentGrid.ObserveField("rowItemFocused", "ItemFocusedObserver")
+    m.top.findNode("leftSideBar").buttonFocused = m.top.GetScene().buttondid
 end sub
 
-sub ItemSelectedObserver(event as object)
-    print event
-end sub
+function onKeyEvent(key as String, press as Boolean) as Boolean
+    ' if back button is passed here View stack is done with Views operaion
+    ' developer can override onKeyEvent to prevent closing channel and show exit dialog for example
+    if press and key = "back"
+        if m.top.GetScene().ComponentController.allowCloseChannelOnLastView
+            m.top.GetScene().exitChannel = false
+            m.top.FindNode("leftSideBar").setFocus(true)
+        end if
+        return true
+    end if
 
-sub ItemFocusedObserver(event as object)
-    itemSelected = event.GetData()
-    focusedChild = m.top.FindNode("contentGrid").focusedChild
-    focusedChild.titlerepeatCount = -1
-    focusedChild.descrrepeatCount = -1
-    print m.top.FindNode("contentGrid").children
-end sub
+    return false
+end function

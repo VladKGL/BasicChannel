@@ -1,4 +1,8 @@
 sub Show(args as Object)
+    m.top.Addfields({
+        buttondid: 0,
+    })
+    print m.top
     customView = CreateObject("roSGNode", "ContentRowGrid")
     content = CreateObject("roSGNode", "ContentNode")
     content.AddFields({
@@ -7,20 +11,14 @@ sub Show(args as Object)
             query: "Live"
         }
     })
-    print customView
-    m.top.theme = {
-        "global": {
-            "OverhangTitle": "App name",
-            "OverhangVisible": true,
-        }
-    }
-    SetUpButtonBar()
+
+    ' SetUpButtonBar()
+    sideBar = CreateObject("roSGNode", "SideBar")
     customView.content = content
     m.top.ComponentController.CallFunc("show", {
         view: customView
     })
 end sub
-
 
 function SetUpButtonBar()
     m.top.buttonBar.visible = true
@@ -81,4 +79,3 @@ sub OnButtonBarItemSelected(event as Object)
         view: customView
     })
 end sub
-
