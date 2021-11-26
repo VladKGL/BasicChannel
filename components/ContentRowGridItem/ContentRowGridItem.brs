@@ -5,6 +5,12 @@ function itemContentChanged()
     itemTitleLabel.text = m.top.itemContent.title
     itemDescriptionLabel = m.top.findNode("itemDescriptionLabel")
     itemDescriptionLabel.text = m.top.itemContent.description
+    m.top.observeField("itemHasFocus", "OKHandler")
 end function
+
+function OKHandler(event as object)
+    print event
+end function
+
 
 

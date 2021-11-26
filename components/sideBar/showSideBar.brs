@@ -29,7 +29,6 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
 
 sub OnButtonBarItemSelected(id as integer)
     ' This is where you can handle a selection event
-    m.top.GetScene().buttondid = m.sideBarBttns.buttonFocused
     itemSelected = id
     buttonAA = [
         "Live",

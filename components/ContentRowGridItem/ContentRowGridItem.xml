@@ -5,6 +5,7 @@
         <!-- <field id="width" type="float" alias="itemPoster.width" />
         <field id="height" type="float" alias="itemPoster.height" /> -->
         <field id="itemContent" type="node" onChange="itemContentChanged" />
+        <field id="itemHasFocus" type="Boolean" onChange="itemContentChanged" />
     </interface>
 
     <script type="text/brightscript" uri="ContentRowGridItem.brs" />

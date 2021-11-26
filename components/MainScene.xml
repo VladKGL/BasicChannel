@@ -9,6 +9,11 @@
         translation="[0,0]"
         opacity="0.87"
     /> -->
+    <SideBar
+        id="leftSideBar"
+        translation="[0, 100]"
+        itemSpacings = "[0, 0, 330]"
+    />
     </children>
     <!-- importing main handler -->
     <script type="text/brightscript" uri="MainScene.brs" />

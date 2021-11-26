@@ -2,7 +2,7 @@ sub Show(args as Object)
     m.top.Addfields({
         buttondid: 0,
     })
-    print m.top
+    m.top.backgroundColor = "#000000"
     customView = CreateObject("roSGNode", "ContentRowGrid")
     content = CreateObject("roSGNode", "ContentNode")
     content.AddFields({
@@ -13,7 +13,7 @@ sub Show(args as Object)
     })
 
     ' SetUpButtonBar()
-    sideBar = CreateObject("roSGNode", "SideBar")
+    ' sideBar = CreateObject("roSGNode", "SideBar")
     customView.content = content
     m.top.ComponentController.CallFunc("show", {
         view: customView

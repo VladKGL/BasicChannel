@@ -5,7 +5,7 @@ sub init()
         translation: [280, 100]
         itemComponentName: "ContentRowGridItem"
     })
-    m.top.findNode("leftSideBar").buttonFocused = m.top.GetScene().buttondid
+    ' contentGrid.observeField("buttonSelected", "buttonObserver")
 end sub
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
@@ -14,10 +14,10 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     if press and key = "back"
         if m.top.GetScene().ComponentController.allowCloseChannelOnLastView
             m.top.GetScene().exitChannel = false
-            m.top.FindNode("leftSideBar").setFocus(true)
+            m.top.GetScene().FindNode("leftSideBar").setFocus(true)
         end if
         return true
     end if
-
+   
     return false
 end function

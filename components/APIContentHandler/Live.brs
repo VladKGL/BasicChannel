@@ -39,6 +39,7 @@ function ParseLiveCountry(url as object, countryCode as string)
                 "title": itemDict.name,
                 "description": itemDict.description,
                 "hdPosterUrl": itemDict.logo,
+                "streamUrl": itemDict.streams.secure_hls_stream,
             })
             childChildren.Push(itemNode)
         end for

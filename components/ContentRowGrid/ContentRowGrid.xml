@@ -17,12 +17,6 @@
     width="1280"
     height="1920"
     translation="[0,0]" />
-
-    <SideBar
-        id="leftSideBar"
-        translation="[0, 100]"
-        itemSpacings = "[0, 0, 330]"
-    />
     <RowList id="contentGrid"
         numRows = "3"
         itemComponentName = "RowListItem"
