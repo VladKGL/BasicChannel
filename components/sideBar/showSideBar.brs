@@ -6,7 +6,7 @@ sub Init()
 end sub
 
 function buttonObserver()
-    ' OK button
+    ' observer for OK button
     category_id = m.sideBarBttns.buttonSelected
     if category_id <> 3
         OnButtonBarItemSelected(category_id)
@@ -14,13 +14,12 @@ function buttonObserver()
 end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
-    ' LEFT RIGHT BUTTONSS
+    ' FOR RIGHT BUTTON
     handled = false
     if press then
         if (key = "right") then
             Scene = m.top.GetScene()
             Scene.findNode("contentGrid").setFocus(true)
-            print m.top
             handled = true
         end if
     end if
@@ -36,7 +35,9 @@ sub OnButtonBarItemSelected(id as integer)
         "Podcasts"
     ]
     mode = buttonAA[itemSelected]
+    ' Creation new custom view
     customView = CreateObject("roSGNode", "ContentRowGrid")
+
     content = CreateObject("roSGNode", "ContentNode")
     content.AddFields({
         HandlerConfigGrid: {
@@ -44,7 +45,10 @@ sub OnButtonBarItemSelected(id as integer)
             query: mode
         }
     })
+
     customView.content = content
+    m.top.GetScene().grid = customView
+    
     m.top.GetScene().ComponentController.CallFunc("show", {
         view: customView
     })
